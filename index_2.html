@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Studio Bruna Mota | Unhas e Sobrancelhas em Fortaleza</title>
+    <meta name="description" content="Realce sua beleza com especialistas em unhas e sobrancelhas no Studio Bruna Mota. Agende seu horário de forma rápida e prática pelo WhatsApp.">
+    <meta name="theme-color" content="#D5A6A6">
+    <link rel="icon" type="image/png" href="favicon-studio-bruna-mota.png">
+    <link rel="apple-touch-icon" href="favicon-studio-bruna-mota.png">
+
+    <!-- =========================================================
+         CAMADA DE SEGURANÇA (nível HTML) — item 7 (CSP) e reforço de privacidade de referrer
+         Isso é um "fallback" via meta tag. A aplicação oficial e mais forte
+         desses headers deve vir do vercel.json (headers HTTP reais), incluído
+         junto com este arquivo. Alguns headers (X-Frame-Options, HSTS,
+         Permissions-Policy, X-Content-Type-Options) só funcionam via HTTP
+         header e NÃO podem ser definidos por <meta> — por isso não aparecem aqui.
+         ========================================================= -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src https://fonts.gstatic.com https://cdnjs.cloudflare.com data:; img-src 'self' https: data:; frame-src https://www.google.com; connect-src 'self'; base-uri 'self'; form-action https://wa.me;">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,600;1,700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <!-- ⚠️ Se quiser adicionar SRI depois, o atributo crossorigin="anonymous"
+         só deve vir JUNTO com integrity="sha512-...". Sozinho, ele exige um
+         handshake CORS que pode falhar sem erro visível e descartar o CSS
+         inteiro (foi o que aconteceu aqui). Copie os dois valores juntos,
+         exatamente como aparecem em https://cdnjs.com/libraries/font-awesome/6.5.2 -->
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { 
+                        sans: ['Poppins', 'sans-serif'], 
+                        serif: ['"Playfair Display"', 'serif'] 
+                    },
+                    colors: { 
+                        rosa: { DEFAULT: '#D5A6A6', dark: '#C08B8B', light: '#FDF8F8' }, 
+                        dourado: '#D4AF37',
+                        ouroBrilho: '#F2C94C' 
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        html { scroll-padding-top: 90px; }
+        body { background: #fff; color: #222; overflow-x: hidden; }
+        
+        .glass-effect { 
+            background: rgba(213, 166, 166, 0.97); 
+            backdrop-filter: blur(12px); 
+            -webkit-backdrop-filter: blur(12px); 
+        }
+        
+        /* Neon Border CSS */
+        .neon-card-wrapper { 
+            position: relative; 
+            overflow: hidden; 
+            border-radius: 1.1rem; 
+            padding: 3px; 
+            z-index: 1; 
+        }
+        .neon-card-wrapper::before { 
+            content: ''; 
+            position: absolute; 
+            inset: -50%; 
+            width: 200%; 
+            height: 200%; 
+            background: conic-gradient(transparent, transparent 12%, #C5A059 30%, transparent 42%); 
+            animation: spin-neon 5s linear infinite; 
+            z-index: -1; 
+        }
+        .neon-card-content { 
+            background: #fff; 
+            border-radius: 0.95rem; 
+            height: 100%; 
+            position: relative; 
+            z-index: 10; 
+            display: flex; 
+            flex-direction: column; 
+        }
+        @keyframes spin-neon { to { transform: rotate(360deg); } }
+        
+        .text-dourado {
+            text-shadow: 0 1px 1px rgba(80, 55, 0, 0.12);
+        }
+
+        .gold-line {
+ width: 70px; height: 1px; background: #C5A059; }
+
+        /* Animação do Texto Principal (Corrigida e Otimizada para Mobile) */
+        .word-wrap {
+            display: inline-block;
+            overflow: hidden;
+            vertical-align: bottom;
+            padding-bottom: 0.1em;
+            margin-bottom: -0.1em;
+        }
+        .word-inner {
+            display: inline-block;
+            transform: translateY(100%);
+            opacity: 0;
+            transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94), opacity 0.6s ease-out;
+            will-change: transform, opacity;
+        }
+        .animate-reveal .word-inner {
+            transform: translateY(0);
+            opacity: 1;
+        }
+        
+        @media (prefers-reduced-motion: reduce) { 
+            *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; } 
+        }
+    
+        /* Brilho branco animado exclusivo do nome Studio Bruna Mota */
+        .{
+            color: #FFFFFF !important;
+            text-shadow:
+                0 0 4px rgba(255, 255, 255, 0.85),
+                0 0 9px rgba(255, 255, 255, 0.65),
+                0 0 16px rgba(255, 255, 255, 0.40);
+            animation: brand-white-pulse 2.4s ease-in-out infinite alternate;
+        }
+
+        @keyframes brand-white-pulse {
+            0% {
+                color: #FFFFFF;
+                text-shadow:
+                    0 0 3px rgba(255, 255, 255, 0.55),
+                    0 0 7px rgba(255, 255, 255, 0.35);
+            }
+            100% {
+                color: #FFFFFF;
+                text-shadow:
+                    0 0 5px rgba(255, 255, 255, 1),
+                    0 0 11px rgba(255, 255, 255, 0.80),
+                    0 0 20px rgba(255, 255, 255, 0.50);
+            }
+        }
+
+    
+        /* Marca do cabeçalho: branco absoluto em todos os estados */
+        header a[href="#inicio"],
+        header a[href="#inicio"]:link,
+        header a[href="#inicio"]:visited,
+        header a[href="#inicio"]:hover,
+        header a[href="#inicio"]:active,
+        header a[href="#inicio"] span {
+            color: #FFFFFF !important;
+        }
+
+    </style>
+</head>
+    <!--
+      ============================================
+      MAPEAMENTO DE IMAGENS FIXO — NÃO ALTERAR
+      HERO: MULHER
+      NAIL DESIGNER: UNHAS
+      COMBO: COMBO
+      SOBRANCELHAS: SOBRANCELHAS
+      SOBRE: INSTITUCIONAL
+
+      HERO:
+      https://i.postimg.cc/Hk4b7pWd/1493279f-205d-450e-83d4-f1f379c685b6.jpg
+
+      NAIL DESIGNER:
+      https://i.postimg.cc/SKWq4x4S/866d2ff0-a19f-4a50-9095-61f0a9ed00ab.jpg
+
+      COMBO:
+      https://i.postimg.cc/4xbphJfD/85fd1ab9-2ade-43f8-81da-c3d818650181.jpg
+
+      SOBRANCELHAS:
+      https://i.postimg.cc/3xC2DKrh/33e63fec-e9aa-47fb-b40e-4eb096babc03.jpg
+
+      SOBRE:
+      https://i.postimg.cc/sgRpXBr8/1a9889db-d96e-4a7b-881f-e1392a66490b.jpg
+      ============================================
+    -->
+<body class="bg-white text-[#222222] font-sans antialiased">
+
+    <!-- HEADER -->
+    <header class="fixed top-0 left-0 w-full z-50 glass-effect shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- LOGOTIPO COM ÍCONE E TEXTO -->
+                <a href="#inicio"
+                   class="flex items-center gap-3 !text-white hover:!text-white visited:!text-white transition-colors group"
+                   style="color:#FFFFFF !important;">
+                    <div class="w-11 h-11 rounded-full border-2 border-white flex items-center justify-center shrink-0 group-hover:border-white group-hover:bg-rosa transition-all relative overflow-hidden" aria-hidden="true">
+                        <span class="font-serif italic font-bold text-[22px] leading-none tracking-[-0.22em] pr-[0.22em] !text-white group-hover:!text-white transition-colors"
+                              style="color:#FFFFFF !important;">BM</span>
+                    </div>
+                    <span class="text-2xl md:text-3xl font-serif italic font-bold tracking-wide !text-white"
+                          style="color:#FFFFFF !important;">Studio Bruna Mota</span>
+                </a>
+                
+                <nav class="hidden md:flex items-center gap-8">
+                    <a href="#inicio" class="text-white hover:text-dourado font-medium">Início</a>
+                    <a href="#servicos" class="text-white hover:text-dourado font-medium">Serviços</a>
+                    <a href="#avaliacoes" class="text-white hover:text-dourado font-medium">Avaliações</a>
+                    <a href="#localizacao" class="text-white hover:text-dourado font-medium">Localização</a>
+                </nav>
+                <a href="https://wa.me/5585996626048" target="_blank" rel="noopener noreferrer" class="hidden md:flex items-center gap-2 bg-rosa text-white px-6 py-3 rounded-full font-semibold shadow-md hover:bg-rosa-dark"> 
+                    <i class="fa-brands fa-whatsapp"></i> Agendar pelo WhatsApp
+                </a>
+                <button id="mobile-menu-btn" class="md:hidden text-white p-2" aria-label="Abrir menu"><i class="fa-solid fa-bars text-2xl"></i></button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-rosa-dark shadow-lg border-t border-white/30">
+            <nav class="px-4 pt-2 pb-6 flex flex-col">
+                <a href="#inicio" class="px-3 py-3 text-white border-b border-white/20">Início</a>
+                <a href="#servicos" class="px-3 py-3 text-white border-b border-white/20">Serviços</a>
+                <a href="#avaliacoes" class="px-3 py-3 text-white border-b border-white/20">Avaliações</a>
+                <a href="#localizacao" class="px-3 py-3 text-white">Localização</a>
+                <a href="https://wa.me/5585996626048" target="_blank" rel="noopener noreferrer" class="mt-5 bg-white text-rosa-dark px-4 py-3 rounded-full font-semibold text-center">Agendar pelo WhatsApp</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- HERO SECTION -->
+        <section id="inicio" class="pt-32 pb-16 md:pt-40 md:pb-24 overflow-hidden">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <!-- Flex-row no MD coloca texto na esquerda e foto na direita lado a lado -->
+                <div class="flex flex-col md:flex-row gap-10 lg:gap-16 items-center">
+                    
+                    <!-- Lado Esquerdo: Texto (Com Animação Contida) -->
+                    <div class="w-full md:w-1/2 text-center md:text-left z-10">
+                        <p class="text-white font-semibold uppercase tracking-[0.2em] text-xs sm:text-sm mb-4">Studio Bruna Mota</p>
+                        
+                        <h1 id="hero-headline" class="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-[#222] leading-tight mb-6 min-h-[120px] md:min-h-[160px]">
+                            Realce sua <span class="text-dourado">Beleza</span> com Especialistas em Unhas e Sobrancelhas
+                        </h1>
+                        
+                        <p class="text-base md:text-lg lg:text-xl text-[#555] mb-8 max-w-xl mx-auto md:mx-0">
+                            Agende seu horário e realce sua autoestima de forma rápida e prática diretamente pelo WhatsApp.
+                        </p>
+                        
+                        <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                            <a href="https://wa.me/5585996626048?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20um%20hor%C3%A1rio%20no%20Studio%20Bruna%20Mota." target="_blank" rel="noopener noreferrer" class="bg-rosa text-white px-8 py-4 rounded-full font-semibold shadow-lg hover:bg-rosa-dark flex items-center justify-center gap-2 transition-transform hover:scale-105">
+                                <i class="fa-brands fa-whatsapp text-xl"></i> Agendar pelo WhatsApp
+                            </a>
+                            <a href="#servicos" class="px-8 py-4 rounded-full font-semibold text-rosa border-2 border-rosa hover:bg-rosa hover:text-white flex items-center justify-center transition-colors">
+                                Ver Serviços
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Lado Direito: Imagem -->
+                    <div class="w-full md:w-1/2 flex justify-center mt-8 md:mt-0">
+                        <div class="relative w-full max-w-[320px] sm:max-w-[400px] lg:max-w-[480px]">
+                            <!-- Círculos decorativos -->
+                            <div class="absolute -top-4 -right-4 w-20 h-20 sm:w-24 sm:h-24 md:w-32 md:h-32 rounded-full border-2 border-dourado/60 z-0"></div>
+                            <div class="absolute -bottom-5 -left-5 w-24 h-24 sm:w-28 sm:h-28 md:w-36 md:h-36 rounded-full border-2 border-rosa/70 z-0"></div>
+
+                            <!-- Borda Dourada sumindo para o Branco (Gradient-to-b) -->
+                            <div class="relative z-10 p-[4px] sm:p-[6px] rounded-3xl aspect-square bg-gradient-to-b from-dourado via-white to-dourado shadow-2xl">
+                                <div class="w-full h-full rounded-[22px] overflow-hidden bg-white">
+                                    <img id="img-hero" data-image-role="hero" src="https://i.postimg.cc/Hk4b7pWd/1493279f-205d-450e-83d4-f1f379c685b6.jpg" alt="Bruna Mota em imagem principal do Studio" fetchpriority="high" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- SERVIÇOS SECTION -->
+        <section id="servicos" class="py-16 md:py-24 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex items-center justify-center gap-4 mb-12">
+                    <div class="hidden sm:block gold-line"></div>
+                    <h2 class="text-3xl md:text-4xl font-serif italic font-bold text-center">Serviços para Realçar sua <span class="text-dourado">Beleza</span></h2>
+                    <div class="hidden sm:block gold-line"></div>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    
+                    <!-- Card 1: Nail Designer (A UNHA FOI MOVIDA PARA CÁ) -->
+                    <article class="neon-card-wrapper shadow-lg group">
+                        <div class="neon-card-content overflow-hidden">
+                            <div class="h-64 overflow-hidden">
+                                <img id="img-nail-designer" data-image-role="nail-designer" src="https://i.postimg.cc/SKWq4x4S/866d2ff0-a19f-4a50-9095-61f0a9ed00ab.jpg" alt="Nail Designer: unhas" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            </div>
+                            <div class="p-6 md:p-8 flex flex-col flex-grow">
+                                <h3 class="text-2xl font-semibold mb-2">Nail Designer</h3>
+                                <p class="text-[#555] mb-6 text-sm">Beleza, cuidado e durabilidade para suas mãos.</p>
+                                <ul class="space-y-3 mb-8 flex-grow">
+                                    <li><i class="fa-solid fa-check text-dourado mr-3"></i>Blindagem</li>
+                                    <li><i class="fa-solid fa-check text-dourado mr-3"></i>Alongamento</li>
+                                    <li><i class="fa-solid fa-check text-dourado mr-3"></i>Esmaltação em gel</li>
+                                </ul>
+                                <a href="https://wa.me/5585996626048?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20um%20servi%C3%A7o%20de%20Nail%20Designer." target="_blank" rel="noopener noreferrer" class="w-full bg-rosa text-white py-3 rounded-full font-semibold hover:bg-rosa-dark text-center">Agendar Serviço</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Card 2: Combo Beleza (Mantém a imagem das duas coisas divididas) -->
+                    <article class="neon-card-wrapper shadow-2xl group md:-translate-y-4">
+                        <div class="neon-card-content overflow-hidden">
+                            <div class="absolute top-4 left-1/2 -translate-x-1/2 bg-dourado text-white px-5 py-1.5 rounded-full text-xs font-bold uppercase z-20">Mais Escolhido</div>
+                            <div class="h-64 overflow-hidden">
+                                <img id="img-combo" data-image-role="combo" src="https://i.postimg.cc/4xbphJfD/85fd1ab9-2ade-43f8-81da-c3d818650181.jpg" alt="Combo de beleza com unhas e sobrancelhas" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            </div>
+                            <div class="p-6 md:p-8 flex flex-col flex-grow">
+                                <h3 class="text-2xl font-bold mb-2">Combo Beleza</h3>
+                                
+                                <p class="text-[#555] mb-5 text-sm leading-relaxed">
+                                    Uma opção prática para quem deseja cuidar de unhas e sobrancelhas em uma única experiência de beleza.
+                                </p>
+                                <div class="bg-rosa-light border border-rosa/40 rounded-2xl p-4 mb-8 flex-grow">
+                                    <div class="flex items-start gap-3">
+                                        <i class="fa-solid fa-sparkles text-dourado mt-1" aria-hidden="true"></i>
+                                        <p class="text-[#444] text-sm leading-relaxed">
+                                            Consulte pelo WhatsApp as opções disponíveis e escolha a combinação que melhor combina com o seu momento.
+                                        </p>
+                                    </div>
+                                </div>
+                                <a href="https://wa.me/5585996626048?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20o%20Combo%20Beleza." target="_blank" rel="noopener noreferrer" class="w-full bg-rosa text-white py-4 rounded-full font-bold hover:bg-rosa-dark text-center">Agendar Combo</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Card 3: Sobrancelhas (A IMAGEM DA MULHER/SOBRANCELHA FOI MOVIDA PARA CÁ) -->
+                    <article class="neon-card-wrapper shadow-lg group">
+                        <div class="neon-card-content overflow-hidden">
+                            <div class="h-64 overflow-hidden">
+                                <img id="img-sobrancelhas" data-image-role="sobrancelhas" src="https://i.postimg.cc/3xC2DKrh/33e63fec-e9aa-47fb-b40e-4eb096babc03.jpg" alt="Design de sobrancelhas" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            </div>
+                            <div class="p-6 md:p-8 flex flex-col flex-grow">
+                                <h3 class="text-2xl font-semibold mb-2">Sobrancelhas</h3>
+                                <p class="text-[#555] mb-6 text-sm">Harmonia e expressão para valorizar o seu olhar.</p>
+                                <ul class="space-y-3 mb-8 flex-grow">
+                                    <li><i class="fa-solid fa-check text-dourado mr-3"></i>Design personalizado</li>
+                                    <li><i class="fa-solid fa-check text-dourado mr-3"></i>Design personalizado com henna</li>
+                                    <li><i class="fa-solid fa-check text-dourado mr-3"></i>Brow Lamination</li>
+                                    <li><i class="fa-solid fa-check text-dourado mr-3"></i>Micropigmentação de sobrancelhas</li>
+                                </ul>
+                                <a href="https://wa.me/5585996626048?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20um%20servi%C3%A7o%20de%20Sobrancelhas." target="_blank" rel="noopener noreferrer" class="w-full bg-rosa text-white py-3 rounded-full font-semibold hover:bg-rosa-dark text-center">Agendar Serviço</a>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- SOBRE / DIFERENCIAIS SECTION -->
+        <section id="sobre" class="py-16 md:py-24 bg-rosa-light">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    <img id="img-sobre" data-image-role="sobre" src="https://i.postimg.cc/sgRpXBr8/1a9889db-d96e-4a7b-881f-e1392a66490b.jpg" alt="Atendimento e ambiente do Studio Bruna Mota" loading="lazy" class="w-full rounded-3xl shadow-xl object-cover max-h-[500px]">
+                    <div>
+                        <p class="text-dourado font-semibold uppercase tracking-[0.2em] text-sm mb-3">Cuidado em cada detalhe</p>
+                        <h2 class="text-3xl md:text-4xl font-bold mb-6">Excelência em Cada <span class="text-dourado">Detalhe</span></h2>
+                        <p class="text-[#444] mb-8 text-lg leading-relaxed">No Studio Bruna Mota, cada atendimento é pensado para valorizar sua beleza e elevar sua autoestima. Trabalhamos com bons produtos, técnicas modernas e atenção aos detalhes.</p>
+                        <div class="grid sm:grid-cols-2 gap-6">
+                            <div><h3 class="font-semibold">Atendimento Ágil</h3><p class="text-sm text-[#555] mt-1">Rapidez sem perder o cuidado.</p></div>
+                            <div><h3 class="font-semibold">Técnicas Modernas</h3><p class="text-sm text-[#555] mt-1">Procedimentos atuais e precisos.</p></div>
+                            <div><h3 class="font-semibold">Higiene e Cuidado</h3><p class="text-sm text-[#555] mt-1">Atenção à higiene em cada atendimento.</p></div>
+                            <div><h3 class="font-semibold">WhatsApp</h3><p class="text-sm text-[#555] mt-1">Agendamento de forma prática.</p></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- AVALIAÇÕES SECTION -->
+        <section id="avaliacoes" class="py-16 md:py-24 bg-white">
+            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <div class="flex items-center justify-center gap-4 mb-4">
+                    <div class="hidden sm:block gold-line"></div>
+                    <h2 class="text-3xl md:text-4xl font-serif italic font-bold">Avaliações de <span class="text-dourado">Clientes</span></h2>
+                    <div class="hidden sm:block gold-line"></div>
+                </div>
+                <p class="mt-5 text-[#555]">Este espaço está preparado para receber avaliações reais das clientes do Studio Bruna Mota.</p>
+            </div>
+        </section>
+
+        <!-- PORTFÓLIO SECTION -->
+        <section id="portfolio" class="py-16 md:py-24 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex items-center justify-center gap-4 mb-12">
+                    <div class="hidden sm:block gold-line"></div>
+                    <h2 class="text-3xl md:text-4xl font-serif italic font-bold text-center">Resultados que Realçam sua <span class="text-dourado">Beleza</span></h2>
+                    <div class="hidden sm:block gold-line"></div>
+                </div>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-5">
+                    <img src="https://i.postimg.cc/VkBXbYsQ/87bce879-fa61-424c-bf4e-2efb2b5d3d91.jpg" alt="Resultado do Studio Bruna Mota" loading="lazy" class="w-full aspect-square object-cover rounded-2xl hover:scale-105 transition-transform">
+                    <img src="https://i.postimg.cc/P5z18tfq/bfa5498a-410e-42e4-8b4a-56fe1ec0c04d.jpg" alt="Resultado do Studio Bruna Mota" loading="lazy" class="w-full aspect-square object-cover rounded-2xl hover:scale-105 transition-transform">
+                    <img src="https://i.postimg.cc/pLYKn2VL/d598aba2-9732-4822-90a2-57819914bae7.jpg" alt="Resultado do Studio Bruna Mota" loading="lazy" class="w-full aspect-square object-cover rounded-2xl hover:scale-105 transition-transform">
+                    <img src="https://i.postimg.cc/XYc9yVNq/f47a79dd-8b24-4f2a-aa31-578e6e57bcbe.jpg" alt="Resultado do Studio Bruna Mota" loading="lazy" class="w-full aspect-square object-cover rounded-2xl hover:scale-105 transition-transform">
+                </div>
+                <div class="mt-10 text-center">
+                    <a href="https://instagram.com/brunamota.ps" target="_blank" rel="noopener noreferrer" class="text-rosa hover:text-dourado font-semibold transition-colors">Ver mais resultados no Instagram <i class="fa-brands fa-instagram ml-2"></i></a>
+                </div>
+            </div>
+        </section>
+
+        <!-- LOCALIZAÇÃO SECTION -->
+        <section id="localizacao" class="py-16 md:py-24 bg-rosa-light">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="bg-white rounded-3xl shadow-xl overflow-hidden">
+                    <div class="grid lg:grid-cols-2">
+                        <div class="p-8 md:p-10 lg:p-16">
+                            <p class="text-dourado font-semibold uppercase tracking-[0.2em] text-sm mb-3">Venha nos visitar</p>
+                            <h2 class="text-3xl md:text-4xl font-bold mb-8">Localização e <span class="text-dourado">Contato</span></h2>
+                            <div class="space-y-6 mb-10">
+                                <div>
+                                    <h3 class="font-semibold"><i class="fa-solid fa-location-dot text-rosa mr-2"></i>Endereço</h3>
+                                    <p class="text-[#555] text-sm mt-1 ml-6">Rua Silveira Filho, 1490<br>Fortaleza - CE</p>
+                                </div>
+                                <div>
+                                    <h3 class="font-semibold"><i class="fa-brands fa-whatsapp text-rosa mr-2"></i>WhatsApp</h3>
+                                    <a href="https://wa.me/5585996626048" target="_blank" rel="noopener noreferrer" class="text-[#555] hover:text-dourado text-sm ml-6 block mt-1">(85) 99662-6048</a>
+                                </div>
+                                <div>
+                                    <h3 class="font-semibold"><i class="fa-brands fa-instagram text-rosa mr-2"></i>Instagram</h3>
+                                    <a href="https://instagram.com/brunamota.ps" target="_blank" rel="noopener noreferrer" class="text-[#555] hover:text-dourado text-sm ml-6 block mt-1">@brunamota.ps</a>
+                                </div>
+                            </div>
+                            <a href="https://wa.me/5585996626048" target="_blank" rel="noopener noreferrer" class="w-full bg-rosa text-white py-4 rounded-full font-semibold flex justify-center hover:bg-rosa-dark transition-colors">Agendar pelo WhatsApp</a>
+                        </div>
+                        <div class="min-h-[350px] relative border-t lg:border-t-0 lg:border-l border-rosa">
+                            <iframe src="https://www.google.com/maps?q=Studio%20Bruna%20Mota%2C%20Rua%20Silveira%20Filho%2C%201490%2C%20Fortaleza%20-%20CE&output=embed" width="100%" height="100%" style="border:0; min-height:100%;" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Localização do Studio Bruna Mota"></iframe>
+                            <a href="https://www.google.com/maps/place/Studio+Bruna+Mota/@-3.7782087,-38.5801992,17z" target="_blank" rel="noopener noreferrer" class="absolute bottom-5 left-1/2 -translate-x-1/2 bg-white text-[#222] px-5 py-3 rounded-full shadow-xl font-semibold hover:bg-rosa hover:text-white whitespace-nowrap transition-colors text-sm sm:text-base">
+                                <i class="fa-solid fa-location-arrow mr-2"></i>Abrir no Mapa
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-[#222] text-white pt-14 pb-8 border-t-4 border-dourado">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between gap-10 mb-10 border-b border-[#444] pb-10">
+                <div>
+                    <!-- ÍCONE NO FOOTER TAMBÉM -->
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-10 h-10 rounded-full border-2 border-dourado flex items-center justify-center shrink-0 text-dourado">
+                            <i class="fa-solid fa-spa text-lg"></i>
+                        </div>
+                        <h2 class="text-3xl font-serif italic font-bold text-white">Studio Bruna Mota</h2>
+                    </div>
+                    <p class="text-[#ddd] max-w-sm text-sm">Especialistas em realçar sua beleza natural através de técnicas modernas em unhas e sobrancelhas.</p>
+                </div>
+                <nav class="flex flex-col gap-2">
+                    <a href="#inicio" class="text-[#ddd] hover:text-dourado transition-colors">Início</a>
+                    <a href="#servicos" class="text-[#ddd] hover:text-dourado transition-colors">Serviços</a>
+                    <a href="#avaliacoes" class="text-[#ddd] hover:text-dourado transition-colors">Avaliações</a>
+                    <a href="#localizacao" class="text-[#ddd] hover:text-dourado transition-colors">Localização</a>
+                </nav>
+            </div>
+            <div class="flex flex-col md:flex-row justify-between items-center gap-5 text-sm text-[#ddd]">
+                <p>&copy; 2026 Studio Bruna Mota. Todos os direitos reservados.</p>
+                <div class="flex gap-4">
+                    <a href="https://instagram.com/brunamota.ps" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="hover:text-dourado transition-colors"><i class="fa-brands fa-instagram text-2xl"></i></a>
+                    <a href="https://wa.me/5585996626048" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" class="hover:text-dourado transition-colors"><i class="fa-brands fa-whatsapp text-2xl"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- FAB WHATSAPP -->
+    <a href="https://wa.me/5585996626048" target="_blank" rel="noopener noreferrer" aria-label="Agendar atendimento pelo WhatsApp" class="fixed bottom-5 right-5 z-50 bg-rosa text-white w-14 h-14 md:w-16 md:h-16 rounded-full flex items-center justify-center shadow-2xl hover:bg-rosa-dark transition-all hover:scale-110 border-2 border-white">
+        <i class="fa-brands fa-whatsapp text-2xl md:text-3xl"></i>
+    </a>
+
+    <script>
+        // Menu Mobile Toggle
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        if (menuBtn && mobileMenu) {
+            menuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+                const icon = menuBtn.querySelector('i');
+                const open = !mobileMenu.classList.contains('hidden');
+                icon.classList.toggle('fa-bars', !open);
+                icon.classList.toggle('fa-xmark', open);
+                menuBtn.setAttribute('aria-expanded', String(open));
+            });
+            mobileMenu.querySelectorAll('a').forEach(a => {
+                a.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                    const icon = menuBtn.querySelector('i');
+                    icon.classList.add('fa-bars');
+                    icon.classList.remove('fa-xmark');
+                });
+            });
+        }
+
+        // Script de Animação do Texto "Reveal"
+        document.addEventListener("DOMContentLoaded", () => {
+            const headline = document.getElementById('hero-headline');
+            if (!headline) return;
+
+            const wrapTextNodes = (node) => {
+                if (node.nodeType === Node.TEXT_NODE) {
+                    const text = node.textContent;
+                    if (!text.trim()) return document.createTextNode(text);
+                    
+                    const words = text.split(/(\s+)/);
+                    const fragment = document.createDocumentFragment();
+                    
+                    words.forEach(word => {
+                        if (word.trim() === '') {
+                            fragment.appendChild(document.createTextNode(word));
+                        } else {
+                            const spanWrap = document.createElement('span');
+                            spanWrap.className = 'word-wrap';
+                            spanWrap.innerHTML = `<span class="word-inner">${word}</span>`;
+                            fragment.appendChild(spanWrap);
+                        }
+                    });
+                    return fragment;
+                }
+                
+                if (node.nodeType === Node.ELEMENT_NODE) {
+                    const clone = node.cloneNode(false);
+                    Array.from(node.childNodes).forEach(child => {
+                        clone.appendChild(wrapTextNodes(child));
+                    });
+                    return clone;
+                }
+                return node;
+            };
+
+            const newContent = wrapTextNodes(headline);
+            headline.innerHTML = '';
+            headline.appendChild(newContent);
+
+            const words = headline.querySelectorAll('.word-inner');
+            words.forEach((word, index) => {
+                word.style.transitionDelay = `${index * 0.1}s`;
+            });
+
+            setTimeout(() => {
+                headline.classList.add('animate-reveal');
+            }, 100);
+        });
+    </script>
+</body>
+</html>
