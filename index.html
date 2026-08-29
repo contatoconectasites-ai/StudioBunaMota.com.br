@@ -1,559 +1,1658 @@
 <!DOCTYPE html>
-<html lang="pt-BR" class="scroll-smooth">
+<html lang="pt-BR" class="no-js">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <title>Studio Bruna Mota | Unhas e Sobrancelhas em Fortaleza</title>
-    <meta name="description" content="Realce sua beleza com especialistas em unhas e sobrancelhas no Studio Bruna Mota. Agende seu horário de forma rápida e prática pelo WhatsApp.">
-    <meta name="theme-color" content="#D5A6A6">
-    <link rel="icon" type="image/png" href="favicon-studio-bruna-mota.png">
-    <link rel="apple-touch-icon" href="favicon-studio-bruna-mota.png">
-
-    <!-- =========================================================
-         CAMADA DE SEGURANÇA (nível HTML) — item 7 (CSP) e reforço de privacidade de referrer
-         Isso é um "fallback" via meta tag. A aplicação oficial e mais forte
-         desses headers deve vir do vercel.json (headers HTTP reais), incluído
-         junto com este arquivo. Alguns headers (X-Frame-Options, HSTS,
-         Permissions-Policy, X-Content-Type-Options) só funcionam via HTTP
-         header e NÃO podem ser definidos por <meta> — por isso não aparecem aqui.
-         ========================================================= -->
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src https://fonts.gstatic.com https://cdnjs.cloudflare.com data:; img-src 'self' https: data:; frame-src https://www.google.com; connect-src 'self'; base-uri 'self'; form-action https://wa.me;">
+    <meta name="description" content="Realce sua beleza no Studio Bruna Mota, em Fortaleza. Nail design, alongamento, esmaltação em gel, design de sobrancelhas, brow lamination e micropigmentação. Agende pelo WhatsApp.">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="theme-color" content="#D8A499">
+    <meta name="format-detection" content="telephone=no">
     <meta name="referrer" content="strict-origin-when-cross-origin">
 
-    <!-- Google Fonts -->
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Studio Bruna Mota | Unhas e Sobrancelhas em Fortaleza">
+    <meta property="og:description" content="Nail design e sobrancelhas com atendimento especializado em Fortaleza. Agende seu horário pelo WhatsApp.">
+    <meta property="og:image" content="https://i.postimg.cc/Hk4b7pWd/1493279f-205d-450e-83d4-f1f379c685b6.jpg">
+    <meta property="og:image:alt" content="Studio Bruna Mota em Fortaleza">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 64 64%27%3E%3Ccircle cx=%2732%27 cy=%2732%27 r=%2732%27 fill=%27%23D8A499%27/%3E%3Ctext x=%2732%27 y=%2739%27 text-anchor=%27middle%27 font-family=%27Georgia,serif%27 font-size=%2724%27 font-style=%27italic%27 font-weight=%27700%27 fill=%27white%27%3EBM%3C/text%3E%3C/svg%3E">
+
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-9ETEz8SFJKxzzbhiq2Rca/duwdKO3IdPQgXvlvSQp1U=' 'sha256-wM8FSna1h5vzEGjz9MIgjlGH+U1+iQ62/oggs6rYU8g='; style-src 'self' 'sha256-uZ6Ty6p4mZCcYoxYNlEYh7cX8w4BcSFxD/1yOtKXjBE=' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com data:; img-src 'self' https://i.postimg.cc data:; frame-src https://www.google.com; connect-src 'self'; base-uri 'self'; object-src 'none'; form-action 'self'; upgrade-insecure-requests;">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://i.postimg.cc" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link rel="dns-prefetch" href="//www.google.com">
+
+    <link rel="preload" as="image" href="https://i.postimg.cc/Hk4b7pWd/1493279f-205d-450e-83d4-f1f379c685b6.jpg">
+
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,600;1,700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-    <!-- FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <!-- ⚠️ Se quiser adicionar SRI depois, o atributo crossorigin="anonymous"
-         só deve vir JUNTO com integrity="sha512-...". Sozinho, ele exige um
-         handshake CORS que pode falhar sem erro visível e descartar o CSS
-         inteiro (foi o que aconteceu aqui). Copie os dois valores juntos,
-         exatamente como aparecem em https://cdnjs.com/libraries/font-awesome/6.5.2 -->
-
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: { 
-                        sans: ['Poppins', 'sans-serif'], 
-                        serif: ['"Playfair Display"', 'serif'] 
-                    },
-                    colors: { 
-                        rosa: { DEFAULT: '#D5A6A6', dark: '#C08B8B', light: '#FDF8F8' }, 
-                        dourado: '#D4AF37',
-                        ouroBrilho: '#F2C94C' 
-                    }
-                }
-            }
-        }
-    </script>
-    
     <style>
-        html { scroll-padding-top: 90px; }
-        body { background: #fff; color: #222; overflow-x: hidden; }
-        
-        .glass-effect { 
-            background: rgba(213, 166, 166, 0.97); 
-            backdrop-filter: blur(12px); 
-            -webkit-backdrop-filter: blur(12px); 
-        }
-        
-        /* Neon Border CSS */
-        .neon-card-wrapper { 
-            position: relative; 
-            overflow: hidden; 
-            border-radius: 1.1rem; 
-            padding: 3px; 
-            z-index: 1; 
-        }
-        .neon-card-wrapper::before { 
-            content: ''; 
-            position: absolute; 
-            inset: -50%; 
-            width: 200%; 
-            height: 200%; 
-            background: conic-gradient(transparent, transparent 12%, #C5A059 30%, transparent 42%); 
-            animation: spin-neon 5s linear infinite; 
-            z-index: -1; 
-        }
-        .neon-card-content { 
-            background: #fff; 
-            border-radius: 0.95rem; 
-            height: 100%; 
-            position: relative; 
-            z-index: 10; 
-            display: flex; 
-            flex-direction: column; 
-        }
-        @keyframes spin-neon { to { transform: rotate(360deg); } }
-        
-        .text-dourado {
-            text-shadow: 0 1px 1px rgba(80, 55, 0, 0.12);
-        }
+:root {
+    color-scheme: light;
+    --rose: #D8A499;
+    --rose-dark: #A4665B;
+    --rose-deep: #92594F;
+    --rose-light: #FFF6F4;
+    --gold: #FFD700;
+    --gold-text: #806B00;
+    --text: #222222;
+    --text-muted: #555555;
+    --surface: #FFFFFF;
+    --footer: #222222;
+    --border-dark: #444444;
+    --container: 1280px;
+    --header-height: 80px;
+    --safe-top: env(safe-area-inset-top, 0px);
+    --safe-bottom: env(safe-area-inset-bottom, 0px);
+    --shadow-soft: 0 14px 40px rgba(42, 27, 27, 0.10);
+    --shadow-lg: 0 18px 45px rgba(42, 27, 27, 0.14);
+}
 
-        .gold-line {
- width: 70px; height: 1px; background: #C5A059; }
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
 
-        /* Animação do Texto Principal (Corrigida e Otimizada para Mobile) */
-        .word-wrap {
-            display: inline-block;
-            overflow: hidden;
-            vertical-align: bottom;
-            padding-bottom: 0.1em;
-            margin-bottom: -0.1em;
-        }
-        .word-inner {
-            display: inline-block;
-            transform: translateY(100%);
-            opacity: 0;
-            transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94), opacity 0.6s ease-out;
-            will-change: transform, opacity;
-        }
-        .animate-reveal .word-inner {
-            transform: translateY(0);
-            opacity: 1;
-        }
-        
-        @media (prefers-reduced-motion: reduce) { 
-            *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; } 
-        }
-    
-        /* Brilho branco animado exclusivo do nome Studio Bruna Mota */
-        .{
-            color: #FFFFFF !important;
-            text-shadow:
-                0 0 4px rgba(255, 255, 255, 0.85),
-                0 0 9px rgba(255, 255, 255, 0.65),
-                0 0 16px rgba(255, 255, 255, 0.40);
-            animation: brand-white-pulse 2.4s ease-in-out infinite alternate;
-        }
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: calc(var(--header-height) + var(--safe-top) + 16px);
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+}
 
-        @keyframes brand-white-pulse {
-            0% {
-                color: #FFFFFF;
-                text-shadow:
-                    0 0 3px rgba(255, 255, 255, 0.55),
-                    0 0 7px rgba(255, 255, 255, 0.35);
-            }
-            100% {
-                color: #FFFFFF;
-                text-shadow:
-                    0 0 5px rgba(255, 255, 255, 1),
-                    0 0 11px rgba(255, 255, 255, 0.80),
-                    0 0 20px rgba(255, 255, 255, 0.50);
-            }
-        }
+body {
+    margin: 0;
+    background: var(--surface);
+    color: var(--text);
+    font-family: "Poppins", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+    overflow-wrap: break-word;
+}
 
-    
-        /* Marca do cabeçalho: branco absoluto em todos os estados */
-        header a[href="#inicio"],
-        header a[href="#inicio"]:link,
-        header a[href="#inicio"]:visited,
-        header a[href="#inicio"]:hover,
-        header a[href="#inicio"]:active,
-        header a[href="#inicio"] span {
-            color: #FFFFFF !important;
-        }
+body.menu-open {
+    overflow: hidden;
+    touch-action: none;
+}
 
+img {
+    display: block;
+    max-width: 100%;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button,
+a {
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+}
+
+button {
+    font: inherit;
+}
+
+::selection {
+    background: var(--rose-dark);
+    color: #fff;
+}
+
+:focus-visible {
+    outline: 3px solid var(--gold);
+    outline-offset: 3px;
+}
+
+.container {
+    width: min(100% - 1.5rem, var(--container));
+    margin-inline: auto;
+}
+
+.skip-link {
+    position: fixed;
+    top: -90px;
+    left: 1rem;
+    z-index: 200;
+    padding: 0.75rem 1rem;
+    border-radius: 0 0 0.75rem 0.75rem;
+    background: var(--text);
+    color: #fff;
+    font-weight: 600;
+    transition: top 0.2s ease;
+}
+
+.skip-link:focus {
+    top: 0;
+}
+
+.accent,
+.section-kicker,
+.eyebrow,
+.check-list i,
+.combo-note > i,
+.contact-item h3 i {
+    color: var(--gold-text);
+}
+
+/* Header */
+.site-header {
+    position: fixed;
+    inset: 0 0 auto;
+    z-index: 100;
+    padding-top: var(--safe-top);
+    background: rgba(164, 102, 91, 0.97);
+    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(12px);
+    box-shadow: 0 2px 10px rgba(42, 27, 27, 0.12);
+}
+
+.header-inner {
+    min-height: var(--header-height);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+}
+
+.brand {
+    min-width: 0;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    color: #fff;
+}
+
+.brand:hover,
+.brand:visited {
+    color: #fff;
+}
+
+.brand-mark {
+    width: 44px;
+    height: 44px;
+    flex: 0 0 44px;
+    display: grid;
+    place-items: center;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 1.4rem;
+    font-style: italic;
+    font-weight: 700;
+    letter-spacing: -0.12em;
+    padding-right: 0.12em;
+    transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.brand:hover .brand-mark {
+    background: rgba(255, 255, 255, 0.12);
+}
+
+.brand-name {
+    font-family: "Playfair Display", Georgia, serif;
+    min-width: 0;
+    font-size: clamp(1.08rem, 5.2vw, 1.9rem);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-style: italic;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+}
+
+.desktop-nav {
+    display: none;
+    align-items: center;
+    gap: 2rem;
+}
+
+.desktop-nav a {
+    color: #fff;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.desktop-nav a:hover {
+    color: #fff3cf;
+}
+
+.mobile-menu-button {
+    width: 44px;
+    height: 44px;
+    border: 0;
+    border-radius: 0.7rem;
+    display: grid;
+    place-items: center;
+    background: transparent;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+.mobile-menu-button:hover {
+    background: rgba(255, 255, 255, 0.12);
+}
+
+.mobile-menu {
+    max-height: calc(100dvh - var(--header-height) - var(--safe-top));
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    -webkit-overflow-scrolling: touch;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    background: var(--rose-dark);
+    box-shadow: var(--shadow-soft);
+}
+
+.mobile-menu[hidden] {
+    display: none;
+}
+
+.mobile-nav {
+    width: min(100% - 2rem, var(--container));
+    margin-inline: auto;
+    padding: 0.5rem 0 calc(1.5rem + var(--safe-bottom));
+    display: flex;
+    flex-direction: column;
+}
+
+.mobile-nav > a:not(.mobile-whatsapp) {
+    min-height: 48px;
+    display: flex;
+    align-items: center;
+    padding: 0.85rem 0.75rem;
+    color: #fff;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.mobile-whatsapp {
+    min-height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1.25rem;
+    padding: 0.85rem 1rem;
+    border-radius: 999px;
+    background: #fff;
+    color: var(--rose-dark);
+    text-align: center;
+    font-weight: 700;
+}
+
+/* Hero */
+.hero-section {
+    padding: calc(var(--header-height) + var(--safe-top) + 2.25rem) 0 3.25rem;
+    overflow: hidden;
+}
+
+.hero-grid {
+    display: grid;
+    gap: 2rem;
+    align-items: center;
+}
+
+.hero-copy {
+    text-align: center;
+}
+
+.eyebrow,
+.section-kicker {
+    margin: 0 0 0.8rem;
+    font-size: 0.82rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+}
+
+.hero-title {
+    min-height: 0;
+    margin: 0 0 1.25rem;
+    font-size: clamp(1.9rem, 8.6vw, 3rem);
+    line-height: 1.12;
+    text-wrap: balance;
+    font-weight: 700;
+}
+
+.hero-description {
+    max-width: 40rem;
+    margin: 0 auto 1.6rem;
+    color: var(--text-muted);
+    font-size: clamp(1rem, 2vw, 1.22rem);
+}
+
+.hero-actions {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.button {
+    min-height: 52px;
+    padding: 0.9rem clamp(1.1rem, 5vw, 1.8rem);
+    border: 2px solid transparent;
+    border-radius: 999px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+    font-weight: 700;
+    line-height: 1.2;
+    text-align: center;
+    transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.button-primary {
+    background: var(--rose-dark);
+    color: #fff;
+    box-shadow: 0 8px 24px rgba(135, 74, 83, 0.22);
+}
+
+.button-primary:hover {
+    background: var(--rose-deep);
+    transform: translateY(-2px);
+}
+
+.button-outline {
+    border-color: var(--rose-dark);
+    color: var(--rose-dark);
+    background: #fff;
+}
+
+.button-outline:hover {
+    background: var(--rose-dark);
+    color: #fff;
+}
+
+.button-full {
+    width: 100%;
+}
+
+.hero-visual {
+    display: flex;
+    justify-content: center;
+}
+
+.hero-image-wrap {
+    position: relative;
+    width: min(92vw, 480px);
+}
+
+.hero-circle {
+    position: absolute;
+    z-index: 0;
+    display: block;
+    border-radius: 50%;
+}
+
+.hero-circle-top {
+    width: clamp(80px, 20vw, 128px);
+    height: clamp(80px, 20vw, 128px);
+    top: -1rem;
+    right: -1rem;
+    border: 2px solid rgba(138, 107, 35, 0.65);
+}
+
+.hero-circle-bottom {
+    width: clamp(96px, 22vw, 144px);
+    height: clamp(96px, 22vw, 144px);
+    left: -1.25rem;
+    bottom: -1.25rem;
+    border: 2px solid rgba(160, 95, 104, 0.7);
+}
+
+.hero-image-frame {
+    position: relative;
+    z-index: 1;
+    aspect-ratio: 1;
+    padding: 5px;
+    border-radius: 1.5rem;
+    background: linear-gradient(to bottom, var(--gold), #fff, var(--gold));
+    box-shadow: 0 24px 55px rgba(42, 27, 27, 0.22);
+}
+
+.hero-image-inner {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 1.25rem;
+    background: #fff;
+}
+
+.hero-image-inner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.7s ease;
+}
+
+.hero-image-inner:hover img {
+    transform: scale(1.04);
+}
+
+/* Word reveal without invalid nested headings or inline styles */
+.word-wrap {
+    display: inline-block;
+    overflow: hidden;
+    vertical-align: bottom;
+    padding-bottom: 0.1em;
+    margin-bottom: -0.1em;
+}
+
+.word-inner {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(100%);
+    transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94), opacity 0.6s ease-out;
+    transition-delay: var(--word-delay, 0ms);
+    will-change: transform, opacity;
+}
+
+.animate-reveal .word-inner {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.word-delay-0 { --word-delay: 0ms; }
+.word-delay-1 { --word-delay: 100ms; }
+.word-delay-2 { --word-delay: 200ms; }
+.word-delay-3 { --word-delay: 300ms; }
+.word-delay-4 { --word-delay: 400ms; }
+.word-delay-5 { --word-delay: 500ms; }
+.word-delay-6 { --word-delay: 600ms; }
+.word-delay-7 { --word-delay: 700ms; }
+.word-delay-8 { --word-delay: 800ms; }
+.word-delay-9 { --word-delay: 900ms; }
+.word-delay-10 { --word-delay: 1000ms; }
+.word-delay-11 { --word-delay: 1100ms; }
+.word-delay-12 { --word-delay: 1200ms; }
+.word-delay-13 { --word-delay: 1300ms; }
+.word-delay-14 { --word-delay: 1400ms; }
+.word-delay-15 { --word-delay: 1500ms; }
+.word-delay-16 { --word-delay: 1600ms; }
+.word-delay-17 { --word-delay: 1700ms; }
+.word-delay-18 { --word-delay: 1800ms; }
+.word-delay-19 { --word-delay: 1900ms; }
+.word-delay-20 { --word-delay: 2000ms; }
+
+/* Sections */
+section[id] {
+    scroll-margin-top: calc(var(--header-height) + var(--safe-top) + 12px);
+}
+
+.section {
+    padding: 3.5rem 0;
+    content-visibility: auto;
+    contain-intrinsic-size: auto 780px;
+}
+
+.section-white {
+    background: #fff;
+}
+
+.section-tinted {
+    background: var(--rose-light);
+}
+
+.section-heading {
+    margin-bottom: 2.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    text-align: center;
+}
+
+.section-heading h2,
+.content-title {
+    margin: 0;
+    font-family: "Playfair Display", Georgia, serif;
+    font-style: italic;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.section-heading h2 {
+    font-size: clamp(1.75rem, 7.6vw, 2.6rem);
+    text-wrap: balance;
+}
+
+.content-title {
+    margin-bottom: 1.5rem;
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    font-size: clamp(1.75rem, 7.3vw, 2.5rem);
+    text-wrap: balance;
+}
+
+.gold-line {
+    display: none;
+    width: 70px;
+    height: 1px;
+    flex: 0 0 70px;
+    background: var(--gold);
+}
+
+/* Services */
+.services-grid {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.neon-card {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    padding: 3px;
+    border-radius: 1.1rem;
+    background: #fff;
+    box-shadow: var(--shadow-lg);
+}
+
+.neon-card::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    inset: -55%;
+    width: 210%;
+    height: 210%;
+    background: conic-gradient(transparent, transparent 12%, var(--gold) 30%, transparent 42%);
+    animation: spin-neon 6s linear infinite;
+}
+
+@keyframes spin-neon {
+    to { transform: rotate(360deg); }
+}
+
+.service-card {
+    display: flex;
+    min-width: 0;
+}
+
+.service-card::after {
+    content: "";
+    position: absolute;
+    inset: 3px;
+    z-index: -1;
+    border-radius: 0.95rem;
+    background: #fff;
+}
+
+.service-image {
+    width: 100%;
+    height: clamp(13.5rem, 65vw, 16rem);
+    overflow: hidden;
+    border-radius: 0.95rem 0.95rem 0 0;
+}
+
+.service-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.service-card:hover .service-image img {
+    transform: scale(1.04);
+}
+
+.service-card {
+    flex-direction: column;
+}
+
+.service-content {
+    position: relative;
+    z-index: 1;
+    flex: 1;
+    padding: 1.35rem;
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    border-radius: 0 0 0.95rem 0.95rem;
+}
+
+.service-body {
+    flex: 1;
+    margin-bottom: 1.5rem;
+}
+
+.service-body h3 {
+    margin: 0 0 0.5rem;
+    font-size: 1.5rem;
+}
+
+.service-body > p {
+    margin: 0 0 1.5rem;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    line-height: 1.65;
+}
+
+.check-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: grid;
+    gap: 0.75rem;
+}
+
+.check-list li {
+    display: flex;
+    align-items: baseline;
+    gap: 0.75rem;
+}
+
+.featured-badge {
+    position: absolute;
+    z-index: 5;
+    top: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 0.4rem 1rem;
+    border-radius: 999px;
+    background: var(--gold);
+    color: #3b3200;
+    font-size: 0.75rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+.combo-note {
+    padding: 1rem;
+    border: 1px solid rgba(160, 95, 104, 0.42);
+    border-radius: 1rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    background: var(--rose-light);
+}
+
+.combo-note p {
+    margin: 0;
+    color: #444;
+    font-size: 0.88rem;
+    line-height: 1.65;
+}
+
+/* About */
+.about-grid {
+    display: grid;
+    gap: 2rem;
+    align-items: center;
+}
+
+.about-image-wrap {
+    aspect-ratio: 4 / 3;
+    max-height: 500px;
+    overflow: hidden;
+    border-radius: 1.5rem;
+    box-shadow: var(--shadow-lg);
+}
+
+.about-image-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.about-intro {
+    margin: 0 0 2rem;
+    color: #444;
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+.benefits-grid {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.benefits-grid h3 {
+    margin: 0;
+    font-size: 1rem;
+}
+
+.benefits-grid p {
+    margin: 0.3rem 0 0;
+    color: var(--text-muted);
+    font-size: 0.88rem;
+}
+
+/* Portfolio */
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.6rem;
+}
+
+.portfolio-grid img {
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+    border-radius: 1rem;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.portfolio-grid img:hover {
+    transform: scale(1.025);
+    box-shadow: var(--shadow-soft);
+}
+
+.portfolio-action {
+    margin-top: 2.5rem;
+    text-align: center;
+}
+
+.portfolio-action a {
+    color: var(--rose-dark);
+    font-weight: 700;
+}
+
+.portfolio-action a:hover {
+    color: var(--gold);
+    text-decoration: underline;
+    text-underline-offset: 0.25em;
+}
+
+.portfolio-action i {
+    margin-left: 0.5rem;
+}
+
+/* Contact and map */
+.contact-card {
+    overflow: hidden;
+    border-radius: 1.5rem;
+    display: grid;
+    background: #fff;
+    box-shadow: var(--shadow-lg);
+}
+
+.contact-info {
+    padding: 1.5rem;
+}
+
+.contact-list {
+    margin-bottom: 2.5rem;
+    display: grid;
+    gap: 1.5rem;
+}
+
+.contact-item h3 {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 0.55rem;
+    font-size: 1rem;
+}
+
+.contact-item p,
+.contact-item a {
+    display: block;
+    margin: 0.35rem 0 0 1.6rem;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+.contact-item a:hover {
+    color: var(--rose-dark);
+    text-decoration: underline;
+    text-underline-offset: 0.2em;
+}
+
+.map-wrap {
+    position: relative;
+    min-height: 300px;
+    border-top: 1px solid var(--rose);
+}
+
+.map-frame {
+    width: 100%;
+    height: 100%;
+    min-height: 300px;
+    border: 0;
+    display: block;
+}
+
+.map-button {
+    position: absolute;
+    left: 50%;
+    bottom: max(1rem, var(--safe-bottom));
+    transform: translateX(-50%);
+    padding: 0.75rem 1.1rem;
+    border-radius: 999px;
+    background: #fff;
+    color: var(--text);
+    box-shadow: var(--shadow-lg);
+    font-size: 0.9rem;
+    font-weight: 700;
+    max-width: calc(100% - 2rem);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+.map-button:hover {
+    background: var(--rose-dark);
+    color: #fff;
+}
+
+.map-button i {
+    margin-right: 0.45rem;
+}
+
+/* Footer */
+.site-footer {
+    padding: 3.25rem 0 calc(1.75rem + var(--safe-bottom));
+    border-top: 4px solid var(--gold);
+    background: var(--footer);
+    color: #fff;
+}
+
+.footer-top {
+    padding-bottom: 2.5rem;
+    margin-bottom: 2.5rem;
+    border-bottom: 1px solid var(--border-dark);
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    justify-content: space-between;
+}
+
+.footer-brand {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+}
+
+.footer-icon {
+    width: 40px;
+    height: 40px;
+    flex: 0 0 40px;
+    border: 2px solid var(--gold);
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    color: var(--gold);
+}
+
+.footer-brand h2 {
+    margin: 0;
+    font-family: "Playfair Display", Georgia, serif;
+    font-style: italic;
+    font-size: 1.9rem;
+}
+
+.footer-description {
+    max-width: 24rem;
+    margin: 0;
+    color: #ddd;
+    font-size: 0.9rem;
+    line-height: 1.65;
+}
+
+.footer-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 0.55rem;
+}
+
+.footer-nav a,
+.footer-bottom {
+    color: #ddd;
+}
+
+.footer-nav a {
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+}
+
+.footer-nav a:hover,
+.social-links a:hover {
+    color: var(--gold);
+}
+
+.footer-bottom {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 0.85rem;
+    text-align: center;
+}
+
+.footer-bottom p {
+    margin: 0;
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-links a {
+    width: 44px;
+    height: 44px;
+    display: grid;
+    place-items: center;
+    color: #fff;
+    font-size: 1.5rem;
+}
+
+.whatsapp-fab {
+    position: fixed;
+    right: max(1rem, env(safe-area-inset-right, 0px));
+    bottom: max(1rem, var(--safe-bottom));
+    z-index: 90;
+    width: 56px;
+    height: 56px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    background: var(--rose-dark);
+    color: #fff;
+    box-shadow: var(--shadow-lg);
+    font-size: 1.7rem;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.whatsapp-fab:hover {
+    background: var(--rose-deep);
+    transform: scale(1.06);
+}
+
+/* Responsive */
+/* Mobile-first refinements */
+@media (max-width: 767px) {
+    :root {
+        --header-height: 68px;
+    }
+
+    .site-header {
+        -webkit-backdrop-filter: none;
+        backdrop-filter: none;
+    }
+
+    .header-inner {
+        min-height: 68px;
+    }
+
+    .brand-mark {
+        width: 40px;
+        height: 40px;
+        flex-basis: 40px;
+        font-size: 1.22rem;
+    }
+
+    .brand-name {
+        max-width: calc(100vw - 112px);
+    }
+
+    .hero-actions .button {
+        width: 100%;
+    }
+
+    .hero-image-frame {
+        border-radius: 1.25rem;
+        box-shadow: 0 12px 28px rgba(42, 27, 27, 0.16);
+    }
+
+    .hero-circle-top { right: -0.35rem; }
+    .hero-circle-bottom { left: -0.35rem; }
+
+    .neon-card::before {
+        animation: none;
+        inset: 0;
+        width: auto;
+        height: auto;
+        background: linear-gradient(135deg, var(--gold), transparent 38%, var(--rose) 72%, var(--gold));
+    }
+
+    .neon-card,
+    .contact-card,
+    .about-image-wrap {
+        box-shadow: 0 10px 26px rgba(42, 27, 27, 0.12);
+    }
+
+    .section-heading { gap: 0.5rem; }
+    .service-body h3 { font-size: 1.35rem; }
+    .about-image-wrap,
+    .contact-card { border-radius: 1.1rem; }
+
+    .map-button {
+        min-height: 46px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .footer-brand h2 {
+        font-size: clamp(1.5rem, 7vw, 1.9rem);
+    }
+
+    .word-inner {
+        opacity: 1;
+        transform: none;
+        transition: none;
+        will-change: auto;
+    }
+}
+
+@media (max-width: 380px) {
+    .container { width: min(100% - 1rem, var(--container)); }
+    .brand-name { font-size: 1rem; }
+    .hero-title { font-size: clamp(1.7rem, 9vw, 2.1rem); }
+    .service-content,
+    .contact-info { padding-inline: 1.1rem; }
+    .whatsapp-fab {
+        width: 52px;
+        height: 52px;
+        font-size: 1.5rem;
+    }
+}
+
+@media (hover: none), (pointer: coarse) {
+    .button-primary:hover,
+    .hero-image-inner:hover img,
+    .service-card:hover .service-image img,
+    .portfolio-grid img:hover,
+    .whatsapp-fab:hover {
+        transform: none;
+    }
+}
+
+@media (min-width: 640px) {
+  .container {
+        width: min(100% - 3rem, var(--container));
+    }
+
+    .hero-actions {
+        flex-direction: row;
+    }
+
+    .gold-line {
+        display: block;
+    }
+
+    .benefits-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .contact-info {
+        padding: 2.5rem;
+    }
+
+    .map-button {
+        font-size: 1rem;
+        padding-inline: 1.25rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .desktop-nav {
+        display: flex;
+    }
+
+    .mobile-menu-button,
+    .mobile-menu {
+        display: none !important;
+    }
+
+    .hero-section {
+        padding: 10rem 0 6rem;
+    }
+
+    .hero-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 3.5rem;
+    }
+
+    .hero-copy {
+        text-align: left;
+    }
+
+    .hero-title {
+        min-height: 160px;
+        font-size: clamp(2.4rem, 5vw, 3.5rem);
+    }
+
+    .hero-description {
+        margin-inline: 0;
+    }
+
+    .hero-actions {
+        justify-content: flex-start;
+    }
+
+    .section {
+        padding: 6rem 0;
+    }
+
+    .services-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .service-card-featured {
+        transform: translateY(-1rem);
+    }
+
+    .service-content {
+        padding: 2rem;
+    }
+
+    .portfolio-grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 1.25rem;
+    }
+
+    .footer-top,
+    .footer-bottom {
+        flex-direction: row;
+        text-align: left;
+    }
+}
+
+@media (min-width: 1024px) {
+    .hero-grid {
+        gap: 4rem;
+    }
+
+    .services-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .about-grid,
+    .contact-card {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .contact-info {
+        padding: 4rem;
+    }
+
+    .map-wrap {
+        border-top: 0;
+        border-left: 1px solid var(--rose);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+    }
+
+    .word-inner {
+        opacity: 1;
+        transform: none;
+    }
+}
     </style>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BeautySalon",
+      "name": "Studio Bruna Mota",
+      "description": "Studio especializado em nail design e sobrancelhas em Fortaleza.",
+      "telephone": "+55 85 99662-6048",
+      "image": "https://i.postimg.cc/Hk4b7pWd/1493279f-205d-450e-83d4-f1f379c685b6.jpg",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Rua Silveira Filho, 1490",
+        "addressLocality": "Fortaleza",
+        "addressRegion": "CE",
+        "addressCountry": "BR"
+      },
+      "sameAs": [
+        "https://instagram.com/brunamota.ps"
+      ]
+    }
+    </script>
 </head>
-    <!--
-      ============================================
-      MAPEAMENTO DE IMAGENS FIXO — NÃO ALTERAR
-      HERO: MULHER
-      NAIL DESIGNER: UNHAS
-      COMBO: COMBO
-      SOBRANCELHAS: SOBRANCELHAS
-      SOBRE: INSTITUCIONAL
+<body>
+    <a href="#conteudo" class="skip-link">Pular para o conteúdo principal</a>
 
-      HERO:
-      https://i.postimg.cc/Hk4b7pWd/1493279f-205d-450e-83d4-f1f379c685b6.jpg
+    <header class="site-header">
+        <div class="container header-inner">
+            <a href="#inicio" class="brand" aria-label="Studio Bruna Mota — início">
+                <span class="brand-mark" aria-hidden="true">BM</span>
+                <span class="brand-name">Studio Bruna Mota</span>
+            </a>
 
-      NAIL DESIGNER:
-      https://i.postimg.cc/SKWq4x4S/866d2ff0-a19f-4a50-9095-61f0a9ed00ab.jpg
+            <nav class="desktop-nav" aria-label="Navegação principal">
+                <a href="#inicio">Início</a>
+                <a href="#servicos">Serviços</a>
+                <a href="#localizacao">Localização</a>
+            </nav>
 
-      COMBO:
-      https://i.postimg.cc/4xbphJfD/85fd1ab9-2ade-43f8-81da-c3d818650181.jpg
-
-      SOBRANCELHAS:
-      https://i.postimg.cc/3xC2DKrh/33e63fec-e9aa-47fb-b40e-4eb096babc03.jpg
-
-      SOBRE:
-      https://i.postimg.cc/sgRpXBr8/1a9889db-d96e-4a7b-881f-e1392a66490b.jpg
-      ============================================
-    -->
-<body class="bg-white text-[#222222] font-sans antialiased">
-
-    <!-- HEADER -->
-    <header class="fixed top-0 left-0 w-full z-50 glass-effect shadow-sm">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-20">
-                <!-- LOGOTIPO COM ÍCONE E TEXTO -->
-                <a href="#inicio"
-                   class="flex items-center gap-3 !text-white hover:!text-white visited:!text-white transition-colors group"
-                   style="color:#FFFFFF !important;">
-                    <div class="w-11 h-11 rounded-full border-2 border-white flex items-center justify-center shrink-0 group-hover:border-white group-hover:bg-rosa transition-all relative overflow-hidden" aria-hidden="true">
-                        <span class="font-serif italic font-bold text-[22px] leading-none tracking-[-0.22em] pr-[0.22em] !text-white group-hover:!text-white transition-colors"
-                              style="color:#FFFFFF !important;">BM</span>
-                    </div>
-                    <span class="text-2xl md:text-3xl font-serif italic font-bold tracking-wide !text-white"
-                          style="color:#FFFFFF !important;">Studio Bruna Mota</span>
-                </a>
-                
-                <nav class="hidden md:flex items-center gap-8">
-                    <a href="#inicio" class="text-white hover:text-dourado font-medium">Início</a>
-                    <a href="#servicos" class="text-white hover:text-dourado font-medium">Serviços</a>
-                    <a href="#avaliacoes" class="text-white hover:text-dourado font-medium">Avaliações</a>
-                    <a href="#localizacao" class="text-white hover:text-dourado font-medium">Localização</a>
-                </nav>
-                <a href="https://wa.me/5585996626048" target="_blank" rel="noopener noreferrer" class="hidden md:flex items-center gap-2 bg-rosa text-white px-6 py-3 rounded-full font-semibold shadow-md hover:bg-rosa-dark"> 
-                    <i class="fa-brands fa-whatsapp"></i> Agendar pelo WhatsApp
-                </a>
-                <button id="mobile-menu-btn" class="md:hidden text-white p-2" aria-label="Abrir menu"><i class="fa-solid fa-bars text-2xl"></i></button>
-            </div>
+            <button
+                id="mobile-menu-btn"
+                class="mobile-menu-button"
+                type="button"
+                aria-label="Abrir menu"
+                aria-expanded="false"
+                aria-controls="mobile-menu"
+            >
+                <i class="fa-solid fa-bars" aria-hidden="true"></i>
+            </button>
         </div>
-        <div id="mobile-menu" class="hidden md:hidden bg-rosa-dark shadow-lg border-t border-white/30">
-            <nav class="px-4 pt-2 pb-6 flex flex-col">
-                <a href="#inicio" class="px-3 py-3 text-white border-b border-white/20">Início</a>
-                <a href="#servicos" class="px-3 py-3 text-white border-b border-white/20">Serviços</a>
-                <a href="#avaliacoes" class="px-3 py-3 text-white border-b border-white/20">Avaliações</a>
-                <a href="#localizacao" class="px-3 py-3 text-white">Localização</a>
-                <a href="https://wa.me/5585996626048" target="_blank" rel="noopener noreferrer" class="mt-5 bg-white text-rosa-dark px-4 py-3 rounded-full font-semibold text-center">Agendar pelo WhatsApp</a>
+
+        <div id="mobile-menu" class="mobile-menu" hidden>
+            <nav class="mobile-nav" aria-label="Navegação mobile">
+                <a href="#inicio">Início</a>
+                <a href="#servicos">Serviços</a>
+                <a href="#localizacao">Localização</a>
+                <a class="mobile-whatsapp" href="https://wa.me/5585996626048" target="_blank" rel="noopener noreferrer">Agendar pelo WhatsApp</a>
             </nav>
         </div>
     </header>
 
-    <main>
-        <!-- HERO SECTION -->
-        <section id="inicio" class="pt-32 pb-16 md:pt-40 md:pb-24 overflow-hidden">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <!-- Flex-row no MD coloca texto na esquerda e foto na direita lado a lado -->
-                <div class="flex flex-col md:flex-row gap-10 lg:gap-16 items-center">
-                    
-                    <!-- Lado Esquerdo: Texto (Com Animação Contida) -->
-                    <div class="w-full md:w-1/2 text-center md:text-left z-10">
-                        <p class="text-white font-semibold uppercase tracking-[0.2em] text-xs sm:text-sm mb-4">Studio Bruna Mota</p>
-                        
-                        <h1 id="hero-headline" class="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-[#222] leading-tight mb-6 min-h-[120px] md:min-h-[160px]">
-                            Realce sua <span class="text-dourado">Beleza</span> com Especialistas em Unhas e Sobrancelhas
-                        </h1>
-                        
-                        <p class="text-base md:text-lg lg:text-xl text-[#555] mb-8 max-w-xl mx-auto md:mx-0">
-                            Agende seu horário e realce sua autoestima de forma rápida e prática diretamente pelo WhatsApp.
-                        </p>
-                        
-                        <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-                            <a href="https://wa.me/5585996626048?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20um%20hor%C3%A1rio%20no%20Studio%20Bruna%20Mota." target="_blank" rel="noopener noreferrer" class="bg-rosa text-white px-8 py-4 rounded-full font-semibold shadow-lg hover:bg-rosa-dark flex items-center justify-center gap-2 transition-transform hover:scale-105">
-                                <i class="fa-brands fa-whatsapp text-xl"></i> Agendar pelo WhatsApp
-                            </a>
-                            <a href="#servicos" class="px-8 py-4 rounded-full font-semibold text-rosa border-2 border-rosa hover:bg-rosa hover:text-white flex items-center justify-center transition-colors">
-                                Ver Serviços
-                            </a>
-                        </div>
-                    </div>
-                    
-                    <!-- Lado Direito: Imagem -->
-                    <div class="w-full md:w-1/2 flex justify-center mt-8 md:mt-0">
-                        <div class="relative w-full max-w-[320px] sm:max-w-[400px] lg:max-w-[480px]">
-                            <!-- Círculos decorativos -->
-                            <div class="absolute -top-4 -right-4 w-20 h-20 sm:w-24 sm:h-24 md:w-32 md:h-32 rounded-full border-2 border-dourado/60 z-0"></div>
-                            <div class="absolute -bottom-5 -left-5 w-24 h-24 sm:w-28 sm:h-28 md:w-36 md:h-36 rounded-full border-2 border-rosa/70 z-0"></div>
+    <main id="conteudo">
+        <section id="inicio" class="hero-section">
+            <div class="container hero-grid">
+                <div class="hero-copy">
+                    <p class="eyebrow">Studio Bruna Mota</p>
 
-                            <!-- Borda Dourada sumindo para o Branco (Gradient-to-b) -->
-                            <div class="relative z-10 p-[4px] sm:p-[6px] rounded-3xl aspect-square bg-gradient-to-b from-dourado via-white to-dourado shadow-2xl">
-                                <div class="w-full h-full rounded-[22px] overflow-hidden bg-white">
-                                    <img id="img-hero" data-image-role="hero" src="https://i.postimg.cc/Hk4b7pWd/1493279f-205d-450e-83d4-f1f379c685b6.jpg" alt="Bruna Mota em imagem principal do Studio" fetchpriority="high" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700">
-                                </div>
+                    <h1 id="hero-headline" class="hero-title">
+                        Realce sua <span class="accent">Beleza</span> com uma Especialista em Nail Design e Sobrancelhas
+                    </h1>
+
+                    <p class="hero-description">
+                        Agende seu horário e realce sua autoestima de forma rápida e prática diretamente pelo WhatsApp.
+                    </p>
+
+                    <div class="hero-actions">
+                        <a class="button button-primary" href="https://wa.me/5585996626048?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20um%20hor%C3%A1rio%20no%20Studio%20Bruna%20Mota." target="_blank" rel="noopener noreferrer">
+                            <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+                            Agendar pelo WhatsApp
+                        </a>
+                        <a class="button button-outline" href="#servicos">Ver Serviços</a>
+                    </div>
+                </div>
+
+                <div class="hero-visual">
+                    <div class="hero-image-wrap">
+                        <span class="hero-circle hero-circle-top" aria-hidden="true"></span>
+                        <span class="hero-circle hero-circle-bottom" aria-hidden="true"></span>
+                        <div class="hero-image-frame">
+                            <div class="hero-image-inner">
+                                <img
+                                    id="img-hero"
+                                    src="https://i.postimg.cc/Hk4b7pWd/1493279f-205d-450e-83d4-f1f379c685b6.jpg"
+                                    alt="Bruna Mota, profissional do Studio Bruna Mota"
+                                    loading="eager"
+                                    fetchpriority="high"
+                                    decoding="async"
+                                >
                             </div>
                         </div>
                     </div>
-
                 </div>
             </div>
         </section>
 
-        <!-- SERVIÇOS SECTION -->
-        <section id="servicos" class="py-16 md:py-24 bg-white">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="flex items-center justify-center gap-4 mb-12">
-                    <div class="hidden sm:block gold-line"></div>
-                    <h2 class="text-3xl md:text-4xl font-serif italic font-bold text-center">Serviços para Realçar sua <span class="text-dourado">Beleza</span></h2>
-                    <div class="hidden sm:block gold-line"></div>
+        <section id="servicos" class="section section-white" aria-labelledby="servicos-title">
+            <div class="container">
+                <div class="section-heading">
+                    <span class="gold-line" aria-hidden="true"></span>
+                    <h2 id="servicos-title">Serviços para Realçar sua <span class="accent">Beleza</span></h2>
+                    <span class="gold-line" aria-hidden="true"></span>
                 </div>
-                
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    
-                    <!-- Card 1: Nail Designer (A UNHA FOI MOVIDA PARA CÁ) -->
-                    <article class="neon-card-wrapper shadow-lg group">
-                        <div class="neon-card-content overflow-hidden">
-                            <div class="h-64 overflow-hidden">
-                                <img id="img-nail-designer" data-image-role="nail-designer" src="https://i.postimg.cc/SKWq4x4S/866d2ff0-a19f-4a50-9095-61f0a9ed00ab.jpg" alt="Nail Designer: unhas" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                            </div>
-                            <div class="p-6 md:p-8 flex flex-col flex-grow">
-                                <h3 class="text-2xl font-semibold mb-2">Nail Designer</h3>
-                                <p class="text-[#555] mb-6 text-sm">Beleza, cuidado e durabilidade para suas mãos.</p>
-                                <ul class="space-y-3 mb-8 flex-grow">
-                                    <li><i class="fa-solid fa-check text-dourado mr-3"></i>Blindagem</li>
-                                    <li><i class="fa-solid fa-check text-dourado mr-3"></i>Alongamento</li>
-                                    <li><i class="fa-solid fa-check text-dourado mr-3"></i>Esmaltação em gel</li>
+
+                <div class="services-grid">
+                    <article class="service-card neon-card">
+                        <div class="service-image">
+                            <img
+                                id="img-nail-designer"
+                                src="https://i.postimg.cc/SKWq4x4S/866d2ff0-a19f-4a50-9095-61f0a9ed00ab.jpg"
+                                alt="Unhas com acabamento profissional de nail design"
+                                loading="lazy"
+                                decoding="async"
+                            >
+                        </div>
+                        <div class="service-content">
+                            <div class="service-body">
+                                <h3>Nail Designer</h3>
+                                <p>Beleza, cuidado e durabilidade para suas mãos.</p>
+                                <ul class="check-list">
+                                    <li><i class="fa-solid fa-check" aria-hidden="true"></i>Blindagem</li>
+                                    <li><i class="fa-solid fa-check" aria-hidden="true"></i>Alongamento</li>
+                                    <li><i class="fa-solid fa-check" aria-hidden="true"></i>Esmaltação em gel</li>
                                 </ul>
-                                <a href="https://wa.me/5585996626048?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20um%20servi%C3%A7o%20de%20Nail%20Designer." target="_blank" rel="noopener noreferrer" class="w-full bg-rosa text-white py-3 rounded-full font-semibold hover:bg-rosa-dark text-center">Agendar Serviço</a>
                             </div>
+                            <a class="button button-primary button-full" href="https://wa.me/5585996626048?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20um%20servi%C3%A7o%20de%20Nail%20Designer." target="_blank" rel="noopener noreferrer">Agendar Serviço</a>
                         </div>
                     </article>
 
-                    <!-- Card 2: Combo Beleza (Mantém a imagem das duas coisas divididas) -->
-                    <article class="neon-card-wrapper shadow-2xl group md:-translate-y-4">
-                        <div class="neon-card-content overflow-hidden">
-                            <div class="absolute top-4 left-1/2 -translate-x-1/2 bg-dourado text-white px-5 py-1.5 rounded-full text-xs font-bold uppercase z-20">Mais Escolhido</div>
-                            <div class="h-64 overflow-hidden">
-                                <img id="img-combo" data-image-role="combo" src="https://i.postimg.cc/4xbphJfD/85fd1ab9-2ade-43f8-81da-c3d818650181.jpg" alt="Combo de beleza com unhas e sobrancelhas" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                            </div>
-                            <div class="p-6 md:p-8 flex flex-col flex-grow">
-                                <h3 class="text-2xl font-bold mb-2">Combo Beleza</h3>
-                                
-                                <p class="text-[#555] mb-5 text-sm leading-relaxed">
-                                    Uma opção prática para quem deseja cuidar de unhas e sobrancelhas em uma única experiência de beleza.
-                                </p>
-                                <div class="bg-rosa-light border border-rosa/40 rounded-2xl p-4 mb-8 flex-grow">
-                                    <div class="flex items-start gap-3">
-                                        <i class="fa-solid fa-sparkles text-dourado mt-1" aria-hidden="true"></i>
-                                        <p class="text-[#444] text-sm leading-relaxed">
-                                            Consulte pelo WhatsApp as opções disponíveis e escolha a combinação que melhor combina com o seu momento.
-                                        </p>
-                                    </div>
+                    <article class="service-card service-card-featured neon-card">
+                        <span class="featured-badge">Mais Escolhido</span>
+                        <div class="service-image">
+                            <img
+                                id="img-combo"
+                                src="https://i.postimg.cc/4xbphJfD/85fd1ab9-2ade-43f8-81da-c3d818650181.jpg"
+                                alt="Combinação de cuidados com unhas e sobrancelhas"
+                                loading="lazy"
+                                decoding="async"
+                            >
+                        </div>
+                        <div class="service-content">
+                            <div class="service-body">
+                                <h3>Combo Beleza</h3>
+                                <p>Uma opção prática para quem deseja cuidar de unhas e sobrancelhas em uma única experiência de beleza.</p>
+                                <div class="combo-note">
+                                    <i class="fa-solid fa-sparkles" aria-hidden="true"></i>
+                                    <p>Consulte pelo WhatsApp as opções disponíveis e escolha a combinação que melhor combina com o seu momento.</p>
                                 </div>
-                                <a href="https://wa.me/5585996626048?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20o%20Combo%20Beleza." target="_blank" rel="noopener noreferrer" class="w-full bg-rosa text-white py-4 rounded-full font-bold hover:bg-rosa-dark text-center">Agendar Combo</a>
                             </div>
+                            <a class="button button-primary button-full" href="https://wa.me/5585996626048?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20o%20Combo%20Beleza." target="_blank" rel="noopener noreferrer">Agendar Combo</a>
                         </div>
                     </article>
 
-                    <!-- Card 3: Sobrancelhas (A IMAGEM DA MULHER/SOBRANCELHA FOI MOVIDA PARA CÁ) -->
-                    <article class="neon-card-wrapper shadow-lg group">
-                        <div class="neon-card-content overflow-hidden">
-                            <div class="h-64 overflow-hidden">
-                                <img id="img-sobrancelhas" data-image-role="sobrancelhas" src="https://i.postimg.cc/3xC2DKrh/33e63fec-e9aa-47fb-b40e-4eb096babc03.jpg" alt="Design de sobrancelhas" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                            </div>
-                            <div class="p-6 md:p-8 flex flex-col flex-grow">
-                                <h3 class="text-2xl font-semibold mb-2">Sobrancelhas</h3>
-                                <p class="text-[#555] mb-6 text-sm">Harmonia e expressão para valorizar o seu olhar.</p>
-                                <ul class="space-y-3 mb-8 flex-grow">
-                                    <li><i class="fa-solid fa-check text-dourado mr-3"></i>Design personalizado</li>
-                                    <li><i class="fa-solid fa-check text-dourado mr-3"></i>Design personalizado com henna</li>
-                                    <li><i class="fa-solid fa-check text-dourado mr-3"></i>Brow Lamination</li>
-                                    <li><i class="fa-solid fa-check text-dourado mr-3"></i>Micropigmentação de sobrancelhas</li>
+                    <article class="service-card neon-card">
+                        <div class="service-image">
+                            <img
+                                id="img-sobrancelhas"
+                                src="https://i.postimg.cc/hvwPp7tK/Whats-App-Image-2026-08-28-at-23-41-15.jpg"
+                                alt="Resultado de design de sobrancelhas"
+                                loading="lazy"
+                                decoding="async"
+                            >
+                        </div>
+                        <div class="service-content">
+                            <div class="service-body">
+                                <h3>Sobrancelhas</h3>
+                                <p>Harmonia e expressão para valorizar o seu olhar.</p>
+                                <ul class="check-list">
+                                    <li><i class="fa-solid fa-check" aria-hidden="true"></i>Design personalizado</li>
+                                    <li><i class="fa-solid fa-check" aria-hidden="true"></i>Design com henna</li>
+                                    <li><i class="fa-solid fa-check" aria-hidden="true"></i>Brow Lamination</li>
+                                    <li><i class="fa-solid fa-check" aria-hidden="true"></i>Micropigmentação</li>
                                 </ul>
-                                <a href="https://wa.me/5585996626048?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20um%20servi%C3%A7o%20de%20Sobrancelhas." target="_blank" rel="noopener noreferrer" class="w-full bg-rosa text-white py-3 rounded-full font-semibold hover:bg-rosa-dark text-center">Agendar Serviço</a>
                             </div>
+                            <a class="button button-primary button-full" href="https://wa.me/5585996626048?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20um%20servi%C3%A7o%20de%20Sobrancelhas." target="_blank" rel="noopener noreferrer">Agendar Serviço</a>
                         </div>
                     </article>
-
                 </div>
             </div>
         </section>
 
-        <!-- SOBRE / DIFERENCIAIS SECTION -->
-        <section id="sobre" class="py-16 md:py-24 bg-rosa-light">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="grid lg:grid-cols-2 gap-12 items-center">
-                    <img id="img-sobre" data-image-role="sobre" src="https://i.postimg.cc/sgRpXBr8/1a9889db-d96e-4a7b-881f-e1392a66490b.jpg" alt="Atendimento e ambiente do Studio Bruna Mota" loading="lazy" class="w-full rounded-3xl shadow-xl object-cover max-h-[500px]">
-                    <div>
-                        <p class="text-dourado font-semibold uppercase tracking-[0.2em] text-sm mb-3">Cuidado em cada detalhe</p>
-                        <h2 class="text-3xl md:text-4xl font-bold mb-6">Excelência em Cada <span class="text-dourado">Detalhe</span></h2>
-                        <p class="text-[#444] mb-8 text-lg leading-relaxed">No Studio Bruna Mota, cada atendimento é pensado para valorizar sua beleza e elevar sua autoestima. Trabalhamos com bons produtos, técnicas modernas e atenção aos detalhes.</p>
-                        <div class="grid sm:grid-cols-2 gap-6">
-                            <div><h3 class="font-semibold">Atendimento Ágil</h3><p class="text-sm text-[#555] mt-1">Rapidez sem perder o cuidado.</p></div>
-                            <div><h3 class="font-semibold">Técnicas Modernas</h3><p class="text-sm text-[#555] mt-1">Procedimentos atuais e precisos.</p></div>
-                            <div><h3 class="font-semibold">Higiene e Cuidado</h3><p class="text-sm text-[#555] mt-1">Atenção à higiene em cada atendimento.</p></div>
-                            <div><h3 class="font-semibold">WhatsApp</h3><p class="text-sm text-[#555] mt-1">Agendamento de forma prática.</p></div>
+        <section id="sobre" class="section section-tinted" aria-labelledby="sobre-title">
+            <div class="container about-grid">
+                <div class="about-image-wrap">
+                    <img
+                        id="img-sobre"
+                        src="https://i.postimg.cc/sgRpXBr8/1a9889db-d96e-4a7b-881f-e1392a66490b.jpg"
+                        alt="Ambiente e atendimento no Studio Bruna Mota"
+                        loading="lazy"
+                        decoding="async"
+                    >
+                </div>
+
+                <div>
+                    <p class="section-kicker">Cuidado em cada detalhe</p>
+                    <h2 id="sobre-title" class="content-title">Excelência em Cada <span class="accent">Detalhe</span></h2>
+                    <p class="about-intro">No Studio Bruna Mota, cada atendimento é pensado para valorizar sua beleza e elevar sua autoestima. Trabalhamos com bons produtos, técnicas modernas e atenção aos detalhes.</p>
+
+                    <div class="benefits-grid">
+                        <div>
+                            <h3>Atendimento Ágil</h3>
+                            <p>Rapidez sem perder o cuidado.</p>
+                        </div>
+                        <div>
+                            <h3>Técnicas Modernas</h3>
+                            <p>Procedimentos atuais e precisos.</p>
+                        </div>
+                        <div>
+                            <h3>Higiene e Cuidado</h3>
+                            <p>Atenção à higiene em cada atendimento.</p>
+                        </div>
+                        <div>
+                            <h3>WhatsApp</h3>
+                            <p>Agendamento de forma prática.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- AVALIAÇÕES SECTION -->
-        <section id="avaliacoes" class="py-16 md:py-24 bg-white">
-            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                <div class="flex items-center justify-center gap-4 mb-4">
-                    <div class="hidden sm:block gold-line"></div>
-                    <h2 class="text-3xl md:text-4xl font-serif italic font-bold">Avaliações de <span class="text-dourado">Clientes</span></h2>
-                    <div class="hidden sm:block gold-line"></div>
+        <section id="portfolio" class="section section-white" aria-labelledby="portfolio-title">
+            <div class="container">
+                <div class="section-heading">
+                    <span class="gold-line" aria-hidden="true"></span>
+                    <h2 id="portfolio-title">Resultados que Realçam sua <span class="accent">Beleza</span></h2>
+                    <span class="gold-line" aria-hidden="true"></span>
                 </div>
-                <p class="mt-5 text-[#555]">Este espaço está preparado para receber avaliações reais das clientes do Studio Bruna Mota.</p>
-            </div>
-        </section>
 
-        <!-- PORTFÓLIO SECTION -->
-        <section id="portfolio" class="py-16 md:py-24 bg-white">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="flex items-center justify-center gap-4 mb-12">
-                    <div class="hidden sm:block gold-line"></div>
-                    <h2 class="text-3xl md:text-4xl font-serif italic font-bold text-center">Resultados que Realçam sua <span class="text-dourado">Beleza</span></h2>
-                    <div class="hidden sm:block gold-line"></div>
+                <div class="portfolio-grid">
+                    <img src="https://i.postimg.cc/VkBXbYsQ/87bce879-fa61-424c-bf4e-2efb2b5d3d91.jpg" alt="Resultado de trabalho realizado pelo Studio Bruna Mota" loading="lazy" decoding="async">
+                    <img src="https://i.postimg.cc/P5z18tfq/bfa5498a-410e-42e4-8b4a-56fe1ec0c04d.jpg" alt="Resultado de procedimento de beleza no Studio Bruna Mota" loading="lazy" decoding="async">
+                    <img src="https://i.postimg.cc/pLYKn2VL/d598aba2-9732-4822-90a2-57819914bae7.jpg" alt="Detalhe de resultado realizado no Studio Bruna Mota" loading="lazy" decoding="async">
+                    <img src="https://i.postimg.cc/XYc9yVNq/f47a79dd-8b24-4f2a-aa31-578e6e57bcbe.jpg" alt="Resultado de atendimento de beleza no Studio Bruna Mota" loading="lazy" decoding="async">
                 </div>
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-5">
-                    <img src="https://i.postimg.cc/VkBXbYsQ/87bce879-fa61-424c-bf4e-2efb2b5d3d91.jpg" alt="Resultado do Studio Bruna Mota" loading="lazy" class="w-full aspect-square object-cover rounded-2xl hover:scale-105 transition-transform">
-                    <img src="https://i.postimg.cc/P5z18tfq/bfa5498a-410e-42e4-8b4a-56fe1ec0c04d.jpg" alt="Resultado do Studio Bruna Mota" loading="lazy" class="w-full aspect-square object-cover rounded-2xl hover:scale-105 transition-transform">
-                    <img src="https://i.postimg.cc/pLYKn2VL/d598aba2-9732-4822-90a2-57819914bae7.jpg" alt="Resultado do Studio Bruna Mota" loading="lazy" class="w-full aspect-square object-cover rounded-2xl hover:scale-105 transition-transform">
-                    <img src="https://i.postimg.cc/XYc9yVNq/f47a79dd-8b24-4f2a-aa31-578e6e57bcbe.jpg" alt="Resultado do Studio Bruna Mota" loading="lazy" class="w-full aspect-square object-cover rounded-2xl hover:scale-105 transition-transform">
-                </div>
-                <div class="mt-10 text-center">
-                    <a href="https://instagram.com/brunamota.ps" target="_blank" rel="noopener noreferrer" class="text-rosa hover:text-dourado font-semibold transition-colors">Ver mais resultados no Instagram <i class="fa-brands fa-instagram ml-2"></i></a>
+
+                <div class="portfolio-action">
+                    <a href="https://instagram.com/brunamota.ps" target="_blank" rel="noopener noreferrer">
+                        Ver mais resultados no Instagram
+                        <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+                    </a>
                 </div>
             </div>
         </section>
 
-        <!-- LOCALIZAÇÃO SECTION -->
-        <section id="localizacao" class="py-16 md:py-24 bg-rosa-light">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="bg-white rounded-3xl shadow-xl overflow-hidden">
-                    <div class="grid lg:grid-cols-2">
-                        <div class="p-8 md:p-10 lg:p-16">
-                            <p class="text-dourado font-semibold uppercase tracking-[0.2em] text-sm mb-3">Venha nos visitar</p>
-                            <h2 class="text-3xl md:text-4xl font-bold mb-8">Localização e <span class="text-dourado">Contato</span></h2>
-                            <div class="space-y-6 mb-10">
-                                <div>
-                                    <h3 class="font-semibold"><i class="fa-solid fa-location-dot text-rosa mr-2"></i>Endereço</h3>
-                                    <p class="text-[#555] text-sm mt-1 ml-6">Rua Silveira Filho, 1490<br>Fortaleza - CE</p>
-                                </div>
-                                <div>
-                                    <h3 class="font-semibold"><i class="fa-brands fa-whatsapp text-rosa mr-2"></i>WhatsApp</h3>
-                                    <a href="https://wa.me/5585996626048" target="_blank" rel="noopener noreferrer" class="text-[#555] hover:text-dourado text-sm ml-6 block mt-1">(85) 99662-6048</a>
-                                </div>
-                                <div>
-                                    <h3 class="font-semibold"><i class="fa-brands fa-instagram text-rosa mr-2"></i>Instagram</h3>
-                                    <a href="https://instagram.com/brunamota.ps" target="_blank" rel="noopener noreferrer" class="text-[#555] hover:text-dourado text-sm ml-6 block mt-1">@brunamota.ps</a>
-                                </div>
+        <section id="localizacao" class="section section-tinted" aria-labelledby="localizacao-title">
+            <div class="container">
+                <div class="contact-card">
+                    <div class="contact-info">
+                        <p class="section-kicker">Venha nos visitar</p>
+                        <h2 id="localizacao-title" class="content-title">Localização e <span class="accent">Contato</span></h2>
+
+                        <div class="contact-list">
+                            <div class="contact-item">
+                                <h3><i class="fa-solid fa-location-dot" aria-hidden="true"></i>Endereço</h3>
+                                <p>Rua Silveira Filho, 1490<br>Fortaleza - CE</p>
                             </div>
-                            <a href="https://wa.me/5585996626048" target="_blank" rel="noopener noreferrer" class="w-full bg-rosa text-white py-4 rounded-full font-semibold flex justify-center hover:bg-rosa-dark transition-colors">Agendar pelo WhatsApp</a>
+
+                            <div class="contact-item">
+                                <h3><i class="fa-brands fa-whatsapp" aria-hidden="true"></i>WhatsApp</h3>
+                                <a href="https://wa.me/5585996626048" target="_blank" rel="noopener noreferrer">(85) 99662-6048</a>
+                            </div>
+
+                            <div class="contact-item">
+                                <h3><i class="fa-brands fa-instagram" aria-hidden="true"></i>Instagram</h3>
+                                <a href="https://instagram.com/brunamota.ps" target="_blank" rel="noopener noreferrer">@brunamota.ps</a>
+                            </div>
                         </div>
-                        <div class="min-h-[350px] relative border-t lg:border-t-0 lg:border-l border-rosa">
-                            <iframe src="https://www.google.com/maps?q=Studio%20Bruna%20Mota%2C%20Rua%20Silveira%20Filho%2C%201490%2C%20Fortaleza%20-%20CE&output=embed" width="100%" height="100%" style="border:0; min-height:100%;" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Localização do Studio Bruna Mota"></iframe>
-                            <a href="https://www.google.com/maps/place/Studio+Bruna+Mota/@-3.7782087,-38.5801992,17z" target="_blank" rel="noopener noreferrer" class="absolute bottom-5 left-1/2 -translate-x-1/2 bg-white text-[#222] px-5 py-3 rounded-full shadow-xl font-semibold hover:bg-rosa hover:text-white whitespace-nowrap transition-colors text-sm sm:text-base">
-                                <i class="fa-solid fa-location-arrow mr-2"></i>Abrir no Mapa
-                            </a>
-                        </div>
+
+                        <a class="button button-primary button-full" href="https://wa.me/5585996626048" target="_blank" rel="noopener noreferrer">Agendar pelo WhatsApp</a>
+                    </div>
+
+                    <div class="map-wrap">
+                        <iframe
+                            class="map-frame"
+                            src="https://www.google.com/maps?q=Studio%20Bruna%20Mota%2C%20Rua%20Silveira%20Filho%2C%201490%2C%20Fortaleza%20-%20CE&output=embed"
+                            title="Localização do Studio Bruna Mota no mapa"
+                            loading="lazy"
+                            allowfullscreen
+                            referrerpolicy="no-referrer-when-downgrade"
+                        ></iframe>
+                        <a class="map-button" href="https://www.google.com/maps/place/Studio+Bruna+Mota/@-3.7782087,-38.5801992,17z" target="_blank" rel="noopener noreferrer">
+                            <i class="fa-solid fa-location-arrow" aria-hidden="true"></i>
+                            Abrir no Mapa
+                        </a>
                     </div>
                 </div>
             </div>
         </section>
     </main>
 
-    <!-- FOOTER -->
-    <footer class="bg-[#222] text-white pt-14 pb-8 border-t-4 border-dourado">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-col md:flex-row justify-between gap-10 mb-10 border-b border-[#444] pb-10">
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-top">
                 <div>
-                    <!-- ÍCONE NO FOOTER TAMBÉM -->
-                    <div class="flex items-center gap-3 mb-4">
-                        <div class="w-10 h-10 rounded-full border-2 border-dourado flex items-center justify-center shrink-0 text-dourado">
-                            <i class="fa-solid fa-spa text-lg"></i>
-                        </div>
-                        <h2 class="text-3xl font-serif italic font-bold text-white">Studio Bruna Mota</h2>
+                    <div class="footer-brand">
+                        <span class="footer-icon" aria-hidden="true"><i class="fa-solid fa-spa"></i></span>
+                        <h2>Studio Bruna Mota</h2>
                     </div>
-                    <p class="text-[#ddd] max-w-sm text-sm">Especialistas em realçar sua beleza natural através de técnicas modernas em unhas e sobrancelhas.</p>
+                    <p class="footer-description">Especialista em realçar sua beleza natural através de técnicas modernas em unhas e sobrancelhas.</p>
                 </div>
-                <nav class="flex flex-col gap-2">
-                    <a href="#inicio" class="text-[#ddd] hover:text-dourado transition-colors">Início</a>
-                    <a href="#servicos" class="text-[#ddd] hover:text-dourado transition-colors">Serviços</a>
-                    <a href="#avaliacoes" class="text-[#ddd] hover:text-dourado transition-colors">Avaliações</a>
-                    <a href="#localizacao" class="text-[#ddd] hover:text-dourado transition-colors">Localização</a>
+
+                <nav class="footer-nav" aria-label="Navegação do rodapé">
+                    <a href="#inicio">Início</a>
+                    <a href="#servicos">Serviços</a>
+                    <a href="#localizacao">Localização</a>
                 </nav>
             </div>
-            <div class="flex flex-col md:flex-row justify-between items-center gap-5 text-sm text-[#ddd]">
+
+            <div class="footer-bottom">
                 <p>&copy; 2026 Studio Bruna Mota. Todos os direitos reservados.</p>
-                <div class="flex gap-4">
-                    <a href="https://instagram.com/brunamota.ps" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="hover:text-dourado transition-colors"><i class="fa-brands fa-instagram text-2xl"></i></a>
-                    <a href="https://wa.me/5585996626048" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" class="hover:text-dourado transition-colors"><i class="fa-brands fa-whatsapp text-2xl"></i></a>
+                <div class="social-links">
+                    <a href="https://instagram.com/brunamota.ps" target="_blank" rel="noopener noreferrer" aria-label="Instagram do Studio Bruna Mota"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+                    <a href="https://wa.me/5585996626048" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp do Studio Bruna Mota"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i></a>
                 </div>
             </div>
         </div>
     </footer>
 
-    <!-- FAB WHATSAPP -->
-    <a href="https://wa.me/5585996626048" target="_blank" rel="noopener noreferrer" aria-label="Agendar atendimento pelo WhatsApp" class="fixed bottom-5 right-5 z-50 bg-rosa text-white w-14 h-14 md:w-16 md:h-16 rounded-full flex items-center justify-center shadow-2xl hover:bg-rosa-dark transition-all hover:scale-110 border-2 border-white">
-        <i class="fa-brands fa-whatsapp text-2xl md:text-3xl"></i>
+    <a class="whatsapp-fab" href="https://wa.me/5585996626048" target="_blank" rel="noopener noreferrer" aria-label="Agendar atendimento pelo WhatsApp">
+        <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
     </a>
-
     <script>
-        // Menu Mobile Toggle
-        const menuBtn = document.getElementById('mobile-menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-        
-        if (menuBtn && mobileMenu) {
-            menuBtn.addEventListener('click', () => {
-                mobileMenu.classList.toggle('hidden');
-                const icon = menuBtn.querySelector('i');
-                const open = !mobileMenu.classList.contains('hidden');
-                icon.classList.toggle('fa-bars', !open);
-                icon.classList.toggle('fa-xmark', open);
-                menuBtn.setAttribute('aria-expanded', String(open));
-            });
-            mobileMenu.querySelectorAll('a').forEach(a => {
-                a.addEventListener('click', () => {
-                    mobileMenu.classList.add('hidden');
-                    const icon = menuBtn.querySelector('i');
-                    icon.classList.add('fa-bars');
-                    icon.classList.remove('fa-xmark');
-                });
-            });
+'use strict';
+
+document.documentElement.classList.remove('no-js');
+
+const menuButton = document.getElementById('mobile-menu-btn');
+const mobileMenu = document.getElementById('mobile-menu');
+
+function setMenuState(open) {
+    if (!menuButton || !mobileMenu) return;
+
+    mobileMenu.hidden = !open;
+    document.body.classList.toggle('menu-open', open);
+    menuButton.setAttribute('aria-expanded', String(open));
+    menuButton.setAttribute('aria-label', open ? 'Fechar menu' : 'Abrir menu');
+
+    const icon = menuButton.querySelector('i');
+    if (icon) {
+        icon.classList.toggle('fa-bars', !open);
+        icon.classList.toggle('fa-xmark', open);
+    }
+}
+
+if (menuButton && mobileMenu) {
+    menuButton.addEventListener('click', () => {
+        const isOpen = menuButton.getAttribute('aria-expanded') === 'true';
+        setMenuState(!isOpen);
+    });
+
+    mobileMenu.querySelectorAll('a').forEach((link) => {
+        link.addEventListener('click', () => setMenuState(false));
+    });
+
+    document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape' && menuButton.getAttribute('aria-expanded') === 'true') {
+            setMenuState(false);
+            menuButton.focus();
         }
+    });
 
-        // Script de Animação do Texto "Reveal"
-        document.addEventListener("DOMContentLoaded", () => {
-            const headline = document.getElementById('hero-headline');
-            if (!headline) return;
+    const closeMenuOnDesktop = () => {
+        if (window.matchMedia('(min-width: 768px)').matches) {
+            setMenuState(false);
+        }
+    };
 
-            const wrapTextNodes = (node) => {
-                if (node.nodeType === Node.TEXT_NODE) {
-                    const text = node.textContent;
-                    if (!text.trim()) return document.createTextNode(text);
-                    
-                    const words = text.split(/(\s+)/);
-                    const fragment = document.createDocumentFragment();
-                    
-                    words.forEach(word => {
-                        if (word.trim() === '') {
-                            fragment.appendChild(document.createTextNode(word));
-                        } else {
-                            const spanWrap = document.createElement('span');
-                            spanWrap.className = 'word-wrap';
-                            spanWrap.innerHTML = `<span class="word-inner">${word}</span>`;
-                            fragment.appendChild(spanWrap);
-                        }
-                    });
-                    return fragment;
-                }
-                
-                if (node.nodeType === Node.ELEMENT_NODE) {
-                    const clone = node.cloneNode(false);
-                    Array.from(node.childNodes).forEach(child => {
-                        clone.appendChild(wrapTextNodes(child));
-                    });
-                    return clone;
-                }
-                return node;
-            };
+    window.addEventListener('resize', closeMenuOnDesktop, { passive: true });
+    window.addEventListener('orientationchange', () => setMenuState(false), { passive: true });
+}
 
-            const newContent = wrapTextNodes(headline);
-            headline.innerHTML = '';
-            headline.appendChild(newContent);
+const headline = document.getElementById('hero-headline');
 
-            const words = headline.querySelectorAll('.word-inner');
-            words.forEach((word, index) => {
-                word.style.transitionDelay = `${index * 0.1}s`;
-            });
+function wrapHeadlineWords(element) {
+    if (!element) return;
 
-            setTimeout(() => {
-                headline.classList.add('animate-reveal');
-            }, 100);
+    const walker = document.createTreeWalker(
+        element,
+        NodeFilter.SHOW_TEXT,
+        {
+            acceptNode(node) {
+                return node.textContent.trim()
+                    ? NodeFilter.FILTER_ACCEPT
+                    : NodeFilter.FILTER_REJECT;
+            }
+        }
+    );
+
+    const textNodes = [];
+    while (walker.nextNode()) {
+        textNodes.push(walker.currentNode);
+    }
+
+    let wordIndex = 0;
+
+    textNodes.forEach((textNode) => {
+        const fragment = document.createDocumentFragment();
+        const parts = textNode.textContent.split(/(\s+)/);
+
+        parts.forEach((part) => {
+            if (!part) return;
+
+            if (/^\s+$/.test(part)) {
+                fragment.appendChild(document.createTextNode(part));
+                return;
+            }
+
+            const wrapper = document.createElement('span');
+            const inner = document.createElement('span');
+
+            wrapper.className = 'word-wrap';
+            inner.classList.add('word-inner', `word-delay-${Math.min(wordIndex, 20)}`);
+            inner.textContent = part;
+
+            wrapper.appendChild(inner);
+            fragment.appendChild(wrapper);
+            wordIndex += 1;
         });
+
+        textNode.replaceWith(fragment);
+    });
+}
+
+if (headline) {
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const compactScreen = window.matchMedia('(max-width: 767px)').matches;
+
+    if (!reduceMotion && !compactScreen) {
+        wrapHeadlineWords(headline);
+        requestAnimationFrame(() => {
+            requestAnimationFrame(() => headline.classList.add('animate-reveal'));
+        });
+    }
+}
+
     </script>
 </body>
 </html>
